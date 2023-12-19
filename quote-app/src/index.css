@@ -1,0 +1,22 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
+@import url('https://fonts.cdnfonts.com/css/wizard-world');
+@import url('https://fonts.cdnfonts.com/css/lumos');
+
+
+@layer base {
+  h1 {
+    @apply text-2xl;
+  }
+  h2 {
+    @apply text-xl;
+  }
+}
+
+* {
+	font-family: 'Inter', sans-serif;
+	box-sizing: border-box;
+}
