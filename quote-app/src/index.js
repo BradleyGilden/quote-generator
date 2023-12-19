@@ -36,7 +36,7 @@ const Container = function({ text, character, primary, secondary, quoteIcon, han
         <button id='new-quote'
         type="button"
         onClick={handleReload}
-        className={`text-white px-3 py-1 rounded-lg max-[400px]:w-full`} style={{ backgroundColor: primary, color: secondary }}>
+        className={`text-white px-3 py-1 rounded-lg max-[400px]:w-full font-semibold`} style={{ backgroundColor: primary, color: secondary }}>
         Generate Quote
         </button>
     
