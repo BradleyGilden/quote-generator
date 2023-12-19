@@ -11,12 +11,14 @@ const Container = function({ text, character, primary, secondary, quoteIcon, han
     <article className='border-4 px-4 py-2 rounded-[20px] w-8/12 sm:w-[500px] text-center'
     id='quote-box'
     style={{ backgroundColor: secondary, borderColor: primary }}>
-
-      <p className="font-['Lumos'] text-xl font-semibold max-[400px]:text-sm"
-      id='text'
-      style={{ color: primary }}
-      >{text}
-      </p>
+      <div className='flex gap-x-2'>
+        <img className='sm:w-[40px] sm:h-[40px] w-[20px] h-[20px]' src={quoteIcon} alt="quote" />
+        <p className="font-['Lumos'] text-xl font-semibold max-[400px]:text-sm"
+        id='text'
+        style={{ color: primary }}
+        >{text}
+        </p>
+      </div>
 
       <p className="text-right font-['Lumos'] font-medium mt-2 max-[400px]:text-xs mr-3"
       id='author'
