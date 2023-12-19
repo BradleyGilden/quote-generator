@@ -1,10 +1,16 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import ReactDOM from 'react-dom/client';
 import {quotes, palettes} from './quotes';
 import './index.css';
 
 
 const Container = function({ text, character, primary, secondary, quoteIcon, handleReload }) {
+  const [textValue, setTextValue] = useState(text);
+
+  useEffect(() => {
+    // Update the state when the 'text' prop changes
+    setTextValue(text);
+  }, [text]);
   const body = document.querySelector('body');
   body.style.backgroundColor = secondary;
   return (
@@ -34,9 +40,9 @@ const Container = function({ text, character, primary, secondary, quoteIcon, han
         Generate Quote
         </button>
     
-        <a className='text-white px-3 py-1 rounded-lg bg-blue-700 max-[400px]:w-full'
+        <a target='_blank' rel='noreferrer' className='text-white px-3 py-1 rounded-lg bg-blue-700 max-[400px]:w-full'
         id="tweet-quote"
-        href="twitter.com/intent/tweet?text=">
+        href={`https://twitter.com/intent/tweet?text=${textValue}`}>
         Tweet
         </a>
       </div>
